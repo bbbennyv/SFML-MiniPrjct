@@ -26,7 +26,7 @@ FetchContent_MakeAvailable(nlohmann_json)
 
 #---- File management & .exe creation ----#
 
-set(SOURCE_FILES src/main.cpp src/Game.h src/Game.cpp)  # Sets variable SOURCE_FILES to hold names & locations of files that need to be compiled into the application
+set(SOURCE_FILES src/main.cpp src/Game.h src/Game.cpp src/GameObjects.cpp src/GameObjects.h)  # Sets variable SOURCE_FILES to hold names & locations of files that need to be compiled into the application
 add_executable(TopDownSFML ${SOURCE_FILES})  # Names the application and tells compiler which source files to use
 
 target_link_libraries(TopDownSFML PRIVATE sfml-graphics sfml-window sfml-system sfml-network sfml-audio nlohmann_json::nlohmann_json) # Links the SFML libraries we need to our application
